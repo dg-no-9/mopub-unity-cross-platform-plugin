@@ -6,7 +6,8 @@ Add objective C headers and implementation files to xCode project (Classes folde
 
 Add contents of MoPubSdk of mopub-ios-sdk into Classes folder of xCode project.
 
-If you want to test mopub in iPhone Simulator, replace RegisterMonoModules.cpp file of Library/ folder with the file from this repo. (Note: for this, select Simulator SDK from Unity->File->Build Settings->Player Settings->Other Settings(in inspector) -> SDK Version.)
+Replace RegisterMonoModules.cpp file of Library/ folder with the file from this repo. 
+If you want to test mopub in iPhone Simulator,  Select Simulator SDK from Unity->File->Build Settings->Player Settings->Other Settings(in inspector) -> SDK Version.)
 
 Android Specific:
 
