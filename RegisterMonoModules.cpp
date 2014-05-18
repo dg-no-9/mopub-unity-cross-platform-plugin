@@ -22,6 +22,7 @@ extern "C"
 	void	_moPubCreateBanner();
 	void	_moPubDestroyBanner();
 	void	_moPubShowBanner();
+    void _moPubHideBanner();
 	void	_moPubRefreshAd();
 	void	_moPubRequestInterstitialAd();
 	void	_moPubShowInterstitialAd();
@@ -44,7 +45,7 @@ void RegisterMonoModules()
 	mono_aot_register_module(mono_aot_module_System_Core_info);
 	mono_aot_register_module(mono_aot_module_UnityEngine_info);
 	mono_aot_register_module(mono_aot_module_mscorlib_info);
-
+    
     mono_dl_register_symbol("UnityNSObject_RetainObject", (void*)&UnityNSObject_RetainObject);
 	mono_dl_register_symbol("UnityNSObject_ReleaseObject", (void*)&UnityNSObject_ReleaseObject);
 	mono_dl_register_symbol("UnityNSError_Code", (void*)&UnityNSError_Code);
@@ -56,11 +57,12 @@ void RegisterMonoModules()
 	mono_dl_register_symbol("_moPubCreateBanner", (void*)&_moPubCreateBanner);
 	mono_dl_register_symbol("_moPubDestroyBanner", (void*)&_moPubDestroyBanner);
 	mono_dl_register_symbol("_moPubShowBanner", (void*)&_moPubShowBanner);
+    mono_dl_register_symbol("_moPubHideBanner", (void*)&_moPubHideBanner);
 	mono_dl_register_symbol("_moPubRefreshAd", (void*)&_moPubRefreshAd);
 	mono_dl_register_symbol("_moPubRequestInterstitialAd", (void*)&_moPubRequestInterstitialAd);
 	mono_dl_register_symbol("_moPubShowInterstitialAd", (void*)&_moPubShowInterstitialAd);
 	mono_dl_register_symbol("_moPubReportApplicationOpen", (void*)&_moPubReportApplicationOpen);
-
+    
 }
 
 void RegisterAllStrippedInternalCalls ()
@@ -6019,11 +6021,11 @@ void RegisterAllStrippedInternalCalls ()
 	Register_UnityEngine_PlayerPrefs_DeleteAll ();
 	void Register_UnityEngine_PlayerPrefs_Save ();
 	Register_UnityEngine_PlayerPrefs_Save ();
-
+    
 }
-void RegisterAllClasses() 
+void RegisterAllClasses()
 {
-void RegisterAllClassesIPhone();
-RegisterAllClassesIPhone();
-
+    void RegisterAllClassesIPhone();
+    RegisterAllClassesIPhone();
+    
 }

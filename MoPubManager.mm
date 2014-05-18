@@ -268,7 +268,7 @@ UIViewController *UnityGetGLViewController();
 - (void)adViewDidFailToLoadAd:(MPAdView*)view
 {
 	_adView.hidden = YES;
-	UnitySendMessage( "MopubManager", "onAdFailed", "" );
+	UnitySendMessage( "MoPubManager", "onAdFailed", "" );
 }
 
 
@@ -277,7 +277,7 @@ UIViewController *UnityGetGLViewController();
 	[self adjustAdViewFrameToShowAdView];
 	_adView.hidden = NO;
 	
-	UnitySendMessage( "MopubManager", "onAdLoaded", "" );
+	UnitySendMessage( "MoPubManager", "onAdLoaded", "" );
 }
 
 
@@ -312,7 +312,7 @@ UIViewController *UnityGetGLViewController();
 
 
 /*
- * This method is called when a mopub://close link is activated. Your implementation of this
+ * This method is called when a MoPub://close link is activated. Your implementation of this
  * method should remove the ad view from the screen (see MPInterstitialAdController for an example).
  */
 - (void)adViewShouldClose:(MPAdView*)view
@@ -326,7 +326,7 @@ UIViewController *UnityGetGLViewController();
 
 - (void)interstitialDidLoadAd:(MPInterstitialAdController*)interstitial
 {
-	UnitySendMessage( "MopubManager", "interstitialDidLoadAd", interstitial.adUnitId.UTF8String );
+	UnitySendMessage( "MoPubManager", "interstitialDidLoadAd", interstitial.adUnitId.UTF8String );
 }
 
 
@@ -338,7 +338,7 @@ UIViewController *UnityGetGLViewController();
 
 - (void)interstitialDidExpire:(MPInterstitialAdController*)interstitial
 {
-	UnitySendMessage( "MopubManager", "interstitialDidExpire", interstitial.adUnitId.UTF8String );
+	UnitySendMessage( "MoPubManager", "interstitialDidExpire", interstitial.adUnitId.UTF8String );
 }
 
 
@@ -360,7 +360,7 @@ UIViewController *UnityGetGLViewController();
 
 - (void)interstitialDidDisappear:(MPInterstitialAdController*)interstitial
 {
-	UnitySendMessage( "MopubManager", "interstitialDidDismiss", interstitial.adUnitId.UTF8String );
+	UnitySendMessage( "MoPubManager", "interstitialDidDismiss", interstitial.adUnitId.UTF8String );
 }
 
 
